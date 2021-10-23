@@ -1,0 +1,8 @@
+services:
+  api:
+    image: node:17
+    volumes:
+      - ./app:/app
+    ports:
+      - "9000:443"
+    command: ["sh", "-c", "cd /app && npm install && npm start"]
